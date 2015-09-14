@@ -11,28 +11,33 @@ import SpriteKit
 
 class GuideVisualizerViewController: UIViewController {
     
+    var guideScene: GuideScene!
+
     var analyzer: AKAudioAnalyzer!
     let microphone = AKMicrophone()
     
-    let analysisSequence = AKSequence()
-    let updateAnalysis = AKEvent()
+    var visualizerTimer: NSTimer!
+    var frequency: CGFloat!
+    var amplitude: CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        if let scene = GuideScene(fileNamed:"GuideScene")
-//        {
-//            let skView = self.view as! SKView
-//            skView.showsFPS = true
-//            skView.showsNodeCount = true
-//            skView.ignoresSiblingOrder = true
-//            scene.scaleMode = .AspectFill
-//            
-//            //match scene size to view size
-//            scene.size = skView.bounds.size
-//            
-//            skView.presentScene(scene)
-//        }
+        if let scene = GuideScene(fileNamed:"GuideScene")
+        {
+            let skView = self.view as! SKView
+            skView.showsFPS = true
+            skView.showsNodeCount = true
+            skView.ignoresSiblingOrder = true
+            scene.scaleMode = .AspectFill
+            
+            //match scene size to view size
+            scene.size = skView.bounds.size
+            
+            skView.presentScene(scene)
+            
+            guideScene = scene
+        }
         
         AKSettings.shared().audioInputEnabled = true
         analyzer = AKAudioAnalyzer(input: microphone.output)
@@ -40,7 +45,7 @@ class GuideVisualizerViewController: UIViewController {
         AKOrchestra.addInstrument(microphone)
         AKOrchestra.addInstrument(analyzer)
         
-        _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateFrequency", userInfo: nil, repeats: true)
+        performSelector("beginVisualizer", withObject: self, afterDelay: 2.0)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -50,8 +55,24 @@ class GuideVisualizerViewController: UIViewController {
         microphone.start()
     }
     
-    func updateFrequency() {
-        print(analyzer.trackedFrequency.value)
+    func beginVisualizer() {
+        
+        visualizerTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateVisualizer", userInfo: nil, repeats: true)
+    }
+    
+    func updateVisualizer() {
+        
+        frequency = CGFloat(analyzer.trackedFrequency.value)
+        amplitude = CGFloat(analyzer.trackedAmplitude.value)
+        
+        let amplitudeConstant: CGFloat = 750.0
+        
+        guideScene.guideEmitterController.animateWidth(amplitude * amplitudeConstant, bounciness: 10.0, speed: 20.0)
+        guideScene.guideEmitterController.animateHeight(amplitude * amplitudeConstant, bounciness: 10.0, speed: 20.0)
+        
+        let frequencyColor = UIColor(red: frequency / 255, green: 0.5, blue: 0.5, alpha: 1.0)
+        
+        guideScene.animateLastColorInColorRamp(frequencyColor)
     }
 
     override func shouldAutorotate() -> Bool {

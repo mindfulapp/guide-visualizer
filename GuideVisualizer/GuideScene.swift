@@ -226,6 +226,14 @@ class GuideScene: SKScene, UIGestureRecognizerDelegate {
         animateColorRamp(colorRampColorsI)
     }
     
+    func animateLastColorInColorRamp(color: UIColor) {
+        
+        var newColorRamp = colorRampColorsI
+        newColorRamp.removeLast()
+        newColorRamp.append(color)
+        animateColorRamp(newColorRamp)
+    }
+    
     func animateColorRamp(colors: [UIColor!]) {
         
         if colors.count != 5

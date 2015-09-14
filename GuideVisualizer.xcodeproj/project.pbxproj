@@ -17,7 +17,6 @@
 		194656621BA33DE000F841F2 /* Guide.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1946565C1BA33DE000F841F2 /* Guide.sks */; };
 		194656631BA33DE000F841F2 /* GuideEmitterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1946565D1BA33DE000F841F2 /* GuideEmitterController.swift */; };
 		194656641BA33DE000F841F2 /* GuideScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1946565F1BA33DE000F841F2 /* GuideScene.sks */; };
-		194656651BA33DE000F841F2 /* GuideScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194656601BA33DE000F841F2 /* GuideScene.swift */; };
 		194656661BA33DE000F841F2 /* GuideVisualizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194656611BA33DE000F841F2 /* GuideVisualizerViewController.swift */; };
 		19C92D821BA76F2700BB544D /* libAudioKit iOS Dynamic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C92D461BA76EA100BB544D /* libAudioKit iOS Dynamic.a */; };
 		19C92D8E1BA7708C00BB544D /* libsndfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C92D831BA76FD800BB544D /* libsndfile.framework */; };
@@ -25,6 +24,7 @@
 		19C92D901BA7708C00BB544D /* CsoundLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C92D841BA76FD800BB544D /* CsoundLib.framework */; };
 		19C92D911BA7708C00BB544D /* CsoundLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19C92D841BA76FD800BB544D /* CsoundLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		19C92D941BA7719200BB544D /* AudioKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C92D931BA7719200BB544D /* AudioKit.swift */; };
+		19C92D981BA7789900BB544D /* GuideScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C92D971BA7789900BB544D /* GuideScene.swift */; };
 		DA9338D05FF0E447780E8502 /* libPods-GuideVisualizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42095D0638A527E278A7972E /* libPods-GuideVisualizer.a */; };
 /* End PBXBuildFile section */
 
@@ -106,12 +106,12 @@
 		1946565C1BA33DE000F841F2 /* Guide.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Guide.sks; sourceTree = "<group>"; };
 		1946565D1BA33DE000F841F2 /* GuideEmitterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideEmitterController.swift; sourceTree = "<group>"; };
 		1946565F1BA33DE000F841F2 /* GuideScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GuideScene.sks; sourceTree = "<group>"; };
-		194656601BA33DE000F841F2 /* GuideScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideScene.swift; sourceTree = "<group>"; };
 		194656611BA33DE000F841F2 /* GuideVisualizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideVisualizerViewController.swift; sourceTree = "<group>"; };
 		19C92D3D1BA76EA100BB544D /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AudioKit.xcodeproj; sourceTree = SOURCE_ROOT; };
 		19C92D831BA76FD800BB544D /* libsndfile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libsndfile.framework; path = AudioKit/Platforms/iOS/libsndfile.framework; sourceTree = "<group>"; };
 		19C92D841BA76FD800BB544D /* CsoundLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CsoundLib.framework; path = AudioKit/Platforms/iOS/CsoundLib.framework; sourceTree = "<group>"; };
 		19C92D931BA7719200BB544D /* AudioKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioKit.swift; sourceTree = "<group>"; };
+		19C92D971BA7789900BB544D /* GuideScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideScene.swift; sourceTree = "<group>"; };
 		42095D0638A527E278A7972E /* libPods-GuideVisualizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GuideVisualizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9102B6251E1016B47A6AE188 /* Pods-GuideVisualizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuideVisualizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuideVisualizer/Pods-GuideVisualizer.release.xcconfig"; sourceTree = "<group>"; };
 		E564AD9ECE5EE82524EF0082 /* Pods-GuideVisualizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuideVisualizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuideVisualizer/Pods-GuideVisualizer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,13 +172,11 @@
 			isa = PBXGroup;
 			children = (
 				1934510E1BA33EB200311B01 /* GuideVisualizer-Bridging-Header.h */,
-				19C92D3D1BA76EA100BB544D /* AudioKit.xcodeproj */,
 				1946562A1BA33D9D00F841F2 /* AppDelegate.swift */,
-				19C92D931BA7719200BB544D /* AudioKit.swift */,
 				1946565C1BA33DE000F841F2 /* Guide.sks */,
 				1946565D1BA33DE000F841F2 /* GuideEmitterController.swift */,
 				1946565F1BA33DE000F841F2 /* GuideScene.sks */,
-				194656601BA33DE000F841F2 /* GuideScene.swift */,
+				19C92D971BA7789900BB544D /* GuideScene.swift */,
 				194656611BA33DE000F841F2 /* GuideVisualizerViewController.swift */,
 				1934510F1BA33ECE00311B01 /* Spark.png */,
 				194656321BA33D9D00F841F2 /* Main.storyboard */,
@@ -217,9 +215,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		19C92D961BA7773200BB544D /* AudioKit */ = {
+			isa = PBXGroup;
+			children = (
+				19C92D3D1BA76EA100BB544D /* AudioKit.xcodeproj */,
+				19C92D931BA7719200BB544D /* AudioKit.swift */,
+			);
+			name = AudioKit;
+			path = GuideVisualizer;
+			sourceTree = "<group>";
+		};
 		60825108A6FC0857CE3CF103 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19C92D961BA7773200BB544D /* AudioKit */,
 				19C92D831BA76FD800BB544D /* libsndfile.framework */,
 				19C92D841BA76FD800BB544D /* CsoundLib.framework */,
 				42095D0638A527E278A7972E /* libPods-GuideVisualizer.a */,
@@ -437,8 +446,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				194656651BA33DE000F841F2 /* GuideScene.swift in Sources */,
 				1946562B1BA33D9D00F841F2 /* AppDelegate.swift in Sources */,
+				19C92D981BA7789900BB544D /* GuideScene.swift in Sources */,
 				194656631BA33DE000F841F2 /* GuideEmitterController.swift in Sources */,
 				19C92D941BA7719200BB544D /* AudioKit.swift in Sources */,
 				194656661BA33DE000F841F2 /* GuideVisualizerViewController.swift in Sources */,
