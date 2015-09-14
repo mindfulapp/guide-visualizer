@@ -19,6 +19,12 @@
 		194656641BA33DE000F841F2 /* GuideScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1946565F1BA33DE000F841F2 /* GuideScene.sks */; };
 		194656651BA33DE000F841F2 /* GuideScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194656601BA33DE000F841F2 /* GuideScene.swift */; };
 		194656661BA33DE000F841F2 /* GuideVisualizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194656611BA33DE000F841F2 /* GuideVisualizerViewController.swift */; };
+		19C92D821BA76F2700BB544D /* libAudioKit iOS Dynamic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C92D461BA76EA100BB544D /* libAudioKit iOS Dynamic.a */; };
+		19C92D8E1BA7708C00BB544D /* libsndfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C92D831BA76FD800BB544D /* libsndfile.framework */; };
+		19C92D8F1BA7708C00BB544D /* libsndfile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19C92D831BA76FD800BB544D /* libsndfile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19C92D901BA7708C00BB544D /* CsoundLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C92D841BA76FD800BB544D /* CsoundLib.framework */; };
+		19C92D911BA7708C00BB544D /* CsoundLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19C92D841BA76FD800BB544D /* CsoundLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19C92D941BA7719200BB544D /* AudioKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C92D931BA7719200BB544D /* AudioKit.swift */; };
 		DA9338D05FF0E447780E8502 /* libPods-GuideVisualizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42095D0638A527E278A7972E /* libPods-GuideVisualizer.a */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +43,50 @@
 			remoteGlobalIDString = 194656261BA33D9D00F841F2;
 			remoteInfo = GuideVisualizer;
 		};
+		19C92D431BA76EA100BB544D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19C92D3D1BA76EA100BB544D /* AudioKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA8E93D81AD3C5240057E979;
+			remoteInfo = "AudioKit iOS Static";
+		};
+		19C92D451BA76EA100BB544D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19C92D3D1BA76EA100BB544D /* AudioKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EAA0F5941AE71C8F007CD7C9;
+			remoteInfo = "AudioKit iOS Dynamic";
+		};
+		19C92D471BA76EA100BB544D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19C92D3D1BA76EA100BB544D /* AudioKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA8E96591AD3C6FC0057E979;
+			remoteInfo = "AudioKit OS X";
+		};
+		19C92D801BA76F2100BB544D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19C92D3D1BA76EA100BB544D /* AudioKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EAA0F4DE1AE71C8F007CD7C9;
+			remoteInfo = "AudioKit iOS Dynamic";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		19C92D921BA7708C00BB544D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				19C92D911BA7708C00BB544D /* CsoundLib.framework in Embed Frameworks */,
+				19C92D8F1BA7708C00BB544D /* libsndfile.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1934510E1BA33EB200311B01 /* GuideVisualizer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GuideVisualizer-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -59,6 +108,10 @@
 		1946565F1BA33DE000F841F2 /* GuideScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GuideScene.sks; sourceTree = "<group>"; };
 		194656601BA33DE000F841F2 /* GuideScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideScene.swift; sourceTree = "<group>"; };
 		194656611BA33DE000F841F2 /* GuideVisualizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideVisualizerViewController.swift; sourceTree = "<group>"; };
+		19C92D3D1BA76EA100BB544D /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AudioKit.xcodeproj; sourceTree = SOURCE_ROOT; };
+		19C92D831BA76FD800BB544D /* libsndfile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libsndfile.framework; path = AudioKit/Platforms/iOS/libsndfile.framework; sourceTree = "<group>"; };
+		19C92D841BA76FD800BB544D /* CsoundLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CsoundLib.framework; path = AudioKit/Platforms/iOS/CsoundLib.framework; sourceTree = "<group>"; };
+		19C92D931BA7719200BB544D /* AudioKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioKit.swift; sourceTree = "<group>"; };
 		42095D0638A527E278A7972E /* libPods-GuideVisualizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GuideVisualizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9102B6251E1016B47A6AE188 /* Pods-GuideVisualizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuideVisualizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuideVisualizer/Pods-GuideVisualizer.release.xcconfig"; sourceTree = "<group>"; };
 		E564AD9ECE5EE82524EF0082 /* Pods-GuideVisualizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuideVisualizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuideVisualizer/Pods-GuideVisualizer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,7 +122,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19C92D821BA76F2700BB544D /* libAudioKit iOS Dynamic.a in Frameworks */,
 				DA9338D05FF0E447780E8502 /* libPods-GuideVisualizer.a in Frameworks */,
+				19C92D901BA7708C00BB544D /* CsoundLib.framework in Frameworks */,
+				19C92D8E1BA7708C00BB544D /* libsndfile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,13 +171,15 @@
 		194656291BA33D9D00F841F2 /* GuideVisualizer */ = {
 			isa = PBXGroup;
 			children = (
+				1934510E1BA33EB200311B01 /* GuideVisualizer-Bridging-Header.h */,
+				19C92D3D1BA76EA100BB544D /* AudioKit.xcodeproj */,
 				1946562A1BA33D9D00F841F2 /* AppDelegate.swift */,
+				19C92D931BA7719200BB544D /* AudioKit.swift */,
 				1946565C1BA33DE000F841F2 /* Guide.sks */,
 				1946565D1BA33DE000F841F2 /* GuideEmitterController.swift */,
 				1946565F1BA33DE000F841F2 /* GuideScene.sks */,
 				194656601BA33DE000F841F2 /* GuideScene.swift */,
 				194656611BA33DE000F841F2 /* GuideVisualizerViewController.swift */,
-				1934510E1BA33EB200311B01 /* GuideVisualizer-Bridging-Header.h */,
 				1934510F1BA33ECE00311B01 /* Spark.png */,
 				194656321BA33D9D00F841F2 /* Main.storyboard */,
 				194656351BA33D9D00F841F2 /* Assets.xcassets */,
@@ -149,9 +207,21 @@
 			path = GuideVisualizerUITests;
 			sourceTree = "<group>";
 		};
+		19C92D3E1BA76EA100BB544D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19C92D441BA76EA100BB544D /* libAudioKit iOS Static.a */,
+				19C92D461BA76EA100BB544D /* libAudioKit iOS Dynamic.a */,
+				19C92D481BA76EA100BB544D /* libAudioKit OS X.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		60825108A6FC0857CE3CF103 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19C92D831BA76FD800BB544D /* libsndfile.framework */,
+				19C92D841BA76FD800BB544D /* CsoundLib.framework */,
 				42095D0638A527E278A7972E /* libPods-GuideVisualizer.a */,
 			);
 			name = Frameworks;
@@ -178,10 +248,12 @@
 				194656241BA33D9D00F841F2 /* Frameworks */,
 				194656251BA33D9D00F841F2 /* Resources */,
 				E160ECE2D9AA44B255BEFF80 /* Copy Pods Resources */,
+				19C92D921BA7708C00BB544D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				19C92D811BA76F2100BB544D /* PBXTargetDependency */,
 			);
 			name = GuideVisualizer;
 			productName = GuideVisualizer;
@@ -258,6 +330,12 @@
 			mainGroup = 1946561E1BA33D9D00F841F2;
 			productRefGroup = 194656281BA33D9D00F841F2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 19C92D3E1BA76EA100BB544D /* Products */;
+					ProjectRef = 19C92D3D1BA76EA100BB544D /* AudioKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				194656261BA33D9D00F841F2 /* GuideVisualizer */,
@@ -266,6 +344,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		19C92D441BA76EA100BB544D /* libAudioKit iOS Static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAudioKit iOS Static.a";
+			remoteRef = 19C92D431BA76EA100BB544D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19C92D461BA76EA100BB544D /* libAudioKit iOS Dynamic.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAudioKit iOS Dynamic.a";
+			remoteRef = 19C92D451BA76EA100BB544D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19C92D481BA76EA100BB544D /* libAudioKit OS X.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAudioKit OS X.a";
+			remoteRef = 19C92D471BA76EA100BB544D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		194656251BA33D9D00F841F2 /* Resources */ = {
@@ -325,7 +427,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuideVisualizer/Pods-GuideVisualizer-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuideVisualizer/Pods-GuideVisualizer-resources.sh\"\n\"${SRCROOT}/AudioKit/Platforms/iOS/run-script.sh\"";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -338,6 +440,7 @@
 				194656651BA33DE000F841F2 /* GuideScene.swift in Sources */,
 				1946562B1BA33D9D00F841F2 /* AppDelegate.swift in Sources */,
 				194656631BA33DE000F841F2 /* GuideEmitterController.swift in Sources */,
+				19C92D941BA7719200BB544D /* AudioKit.swift in Sources */,
 				194656661BA33DE000F841F2 /* GuideVisualizerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +474,11 @@
 			target = 194656261BA33D9D00F841F2 /* GuideVisualizer */;
 			targetProxy = 1946564B1BA33D9D00F841F2 /* PBXContainerItemProxy */;
 		};
+		19C92D811BA76F2100BB544D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AudioKit iOS Dynamic";
+			targetProxy = 19C92D801BA76F2100BB544D /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -396,7 +504,7 @@
 		194656511BA33D9D00F841F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -440,7 +548,7 @@
 		194656521BA33D9D00F841F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -480,12 +588,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AudioKit/Platforms/iOS",
+				);
 				INFOPLIST_FILE = GuideVisualizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Harmony.GuideVisualizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GuideVisualizer/GuideVisualizer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/AudioKit/**";
 			};
 			name = Debug;
 		};
@@ -495,11 +608,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AudioKit/Platforms/iOS",
+				);
 				INFOPLIST_FILE = GuideVisualizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Harmony.GuideVisualizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GuideVisualizer/GuideVisualizer-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/AudioKit/**";
 			};
 			name = Release;
 		};

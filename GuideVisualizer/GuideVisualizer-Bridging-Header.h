@@ -10,5 +10,6 @@
 #define Harmony_Bridging_Header_h
 
 #import <POP/POP.h>
+#import "AKFoundation.h"
 
 #endif /* Harmony_Bridging_Header_h */
