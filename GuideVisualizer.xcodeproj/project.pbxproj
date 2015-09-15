@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		193451101BA33ECE00311B01 /* Spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1934510F1BA33ECE00311B01 /* Spark.png */; };
 		1946562B1BA33D9D00F841F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1946562A1BA33D9D00F841F2 /* AppDelegate.swift */; };
-		194656341BA33D9D00F841F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194656321BA33D9D00F841F2 /* Main.storyboard */; };
 		194656361BA33D9D00F841F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194656351BA33D9D00F841F2 /* Assets.xcassets */; };
 		194656391BA33D9D00F841F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194656371BA33D9D00F841F2 /* LaunchScreen.storyboard */; };
 		194656441BA33D9D00F841F2 /* GuideVisualizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194656431BA33D9D00F841F2 /* GuideVisualizerTests.swift */; };
@@ -18,6 +17,14 @@
 		194656631BA33DE000F841F2 /* GuideEmitterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1946565D1BA33DE000F841F2 /* GuideEmitterController.swift */; };
 		194656641BA33DE000F841F2 /* GuideScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1946565F1BA33DE000F841F2 /* GuideScene.sks */; };
 		194656661BA33DE000F841F2 /* GuideVisualizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194656611BA33DE000F841F2 /* GuideVisualizerViewController.swift */; };
+		1964D94B1BA898350096EE5E /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1964D94A1BA898350096EE5E /* AnalysisViewController.swift */; };
+		1964D9541BA898DC0096EE5E /* beta-0.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1964D94E1BA898DC0096EE5E /* beta-0.m4a */; };
+		1964D9551BA898DC0096EE5E /* beta-0A.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1964D94F1BA898DC0096EE5E /* beta-0A.wav */; };
+		1964D9561BA898DC0096EE5E /* beta-1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1964D9501BA898DC0096EE5E /* beta-1.m4a */; };
+		1964D9571BA898DC0096EE5E /* beta-1A.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1964D9511BA898DC0096EE5E /* beta-1A.wav */; };
+		1964D9581BA898DC0096EE5E /* beta-2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1964D9521BA898DC0096EE5E /* beta-2.m4a */; };
+		1964D9591BA898DC0096EE5E /* beta-2A.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1964D9531BA898DC0096EE5E /* beta-2A.wav */; };
+		1964D96C1BA89C480096EE5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1964D96B1BA89C480096EE5E /* Main.storyboard */; };
 		19C92D821BA76F2700BB544D /* libAudioKit iOS Dynamic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C92D461BA76EA100BB544D /* libAudioKit iOS Dynamic.a */; };
 		19C92D8E1BA7708C00BB544D /* libsndfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C92D831BA76FD800BB544D /* libsndfile.framework */; };
 		19C92D8F1BA7708C00BB544D /* libsndfile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19C92D831BA76FD800BB544D /* libsndfile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -93,7 +100,6 @@
 		1934510F1BA33ECE00311B01 /* Spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spark.png; sourceTree = "<group>"; };
 		194656271BA33D9D00F841F2 /* GuideVisualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuideVisualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1946562A1BA33D9D00F841F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		194656331BA33D9D00F841F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		194656351BA33D9D00F841F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		194656381BA33D9D00F841F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1946563A1BA33D9D00F841F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,6 +113,14 @@
 		1946565D1BA33DE000F841F2 /* GuideEmitterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideEmitterController.swift; sourceTree = "<group>"; };
 		1946565F1BA33DE000F841F2 /* GuideScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GuideScene.sks; sourceTree = "<group>"; };
 		194656611BA33DE000F841F2 /* GuideVisualizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideVisualizerViewController.swift; sourceTree = "<group>"; };
+		1964D94A1BA898350096EE5E /* AnalysisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
+		1964D94E1BA898DC0096EE5E /* beta-0.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "beta-0.m4a"; sourceTree = "<group>"; };
+		1964D94F1BA898DC0096EE5E /* beta-0A.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beta-0A.wav"; sourceTree = "<group>"; };
+		1964D9501BA898DC0096EE5E /* beta-1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "beta-1.m4a"; sourceTree = "<group>"; };
+		1964D9511BA898DC0096EE5E /* beta-1A.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beta-1A.wav"; sourceTree = "<group>"; };
+		1964D9521BA898DC0096EE5E /* beta-2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "beta-2.m4a"; sourceTree = "<group>"; };
+		1964D9531BA898DC0096EE5E /* beta-2A.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beta-2A.wav"; sourceTree = "<group>"; };
+		1964D96B1BA89C480096EE5E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		19C92D3D1BA76EA100BB544D /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AudioKit.xcodeproj; sourceTree = SOURCE_ROOT; };
 		19C92D831BA76FD800BB544D /* libsndfile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libsndfile.framework; path = AudioKit/Platforms/iOS/libsndfile.framework; sourceTree = "<group>"; };
 		19C92D841BA76FD800BB544D /* CsoundLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CsoundLib.framework; path = AudioKit/Platforms/iOS/CsoundLib.framework; sourceTree = "<group>"; };
@@ -172,14 +186,16 @@
 			isa = PBXGroup;
 			children = (
 				1934510E1BA33EB200311B01 /* GuideVisualizer-Bridging-Header.h */,
+				1964D96B1BA89C480096EE5E /* Main.storyboard */,
 				1946562A1BA33D9D00F841F2 /* AppDelegate.swift */,
 				1946565C1BA33DE000F841F2 /* Guide.sks */,
 				1946565D1BA33DE000F841F2 /* GuideEmitterController.swift */,
 				1946565F1BA33DE000F841F2 /* GuideScene.sks */,
 				19C92D971BA7789900BB544D /* GuideScene.swift */,
 				194656611BA33DE000F841F2 /* GuideVisualizerViewController.swift */,
+				1964D94A1BA898350096EE5E /* AnalysisViewController.swift */,
+				1964D96A1BA89BC80096EE5E /* Audio */,
 				1934510F1BA33ECE00311B01 /* Spark.png */,
-				194656321BA33D9D00F841F2 /* Main.storyboard */,
 				194656351BA33D9D00F841F2 /* Assets.xcassets */,
 				194656371BA33D9D00F841F2 /* LaunchScreen.storyboard */,
 				1946563A1BA33D9D00F841F2 /* Info.plist */,
@@ -203,6 +219,19 @@
 				194656501BA33D9D00F841F2 /* Info.plist */,
 			);
 			path = GuideVisualizerUITests;
+			sourceTree = "<group>";
+		};
+		1964D96A1BA89BC80096EE5E /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				1964D94E1BA898DC0096EE5E /* beta-0.m4a */,
+				1964D94F1BA898DC0096EE5E /* beta-0A.wav */,
+				1964D9501BA898DC0096EE5E /* beta-1.m4a */,
+				1964D9511BA898DC0096EE5E /* beta-1A.wav */,
+				1964D9521BA898DC0096EE5E /* beta-2.m4a */,
+				1964D9531BA898DC0096EE5E /* beta-2A.wav */,
+			);
+			name = Audio;
 			sourceTree = "<group>";
 		};
 		19C92D3E1BA76EA100BB544D /* Products */ = {
@@ -384,10 +413,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				194656621BA33DE000F841F2 /* Guide.sks in Resources */,
+				1964D9551BA898DC0096EE5E /* beta-0A.wav in Resources */,
 				194656391BA33D9D00F841F2 /* LaunchScreen.storyboard in Resources */,
+				1964D96C1BA89C480096EE5E /* Main.storyboard in Resources */,
 				194656361BA33D9D00F841F2 /* Assets.xcassets in Resources */,
-				194656341BA33D9D00F841F2 /* Main.storyboard in Resources */,
+				1964D9581BA898DC0096EE5E /* beta-2.m4a in Resources */,
+				1964D9541BA898DC0096EE5E /* beta-0.m4a in Resources */,
+				1964D9561BA898DC0096EE5E /* beta-1.m4a in Resources */,
+				1964D9591BA898DC0096EE5E /* beta-2A.wav in Resources */,
 				194656641BA33DE000F841F2 /* GuideScene.sks in Resources */,
+				1964D9571BA898DC0096EE5E /* beta-1A.wav in Resources */,
 				193451101BA33ECE00311B01 /* Spark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +483,7 @@
 			files = (
 				1946562B1BA33D9D00F841F2 /* AppDelegate.swift in Sources */,
 				19C92D981BA7789900BB544D /* GuideScene.swift in Sources */,
+				1964D94B1BA898350096EE5E /* AnalysisViewController.swift in Sources */,
 				194656631BA33DE000F841F2 /* GuideEmitterController.swift in Sources */,
 				19C92D941BA7719200BB544D /* AudioKit.swift in Sources */,
 				194656661BA33DE000F841F2 /* GuideVisualizerViewController.swift in Sources */,
@@ -491,14 +527,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		194656321BA33D9D00F841F2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				194656331BA33D9D00F841F2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		194656371BA33D9D00F841F2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
