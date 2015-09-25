@@ -16,7 +16,6 @@ class GuideScene: SKScene, UIGestureRecognizerDelegate {
     
     var guideEmitterController: GuideEmitterController!
     var guideNode: SKEmitterNode!
-    var guideTouchNode: SKSpriteNode!
     
     var guideSceneDelegate: GuideSceneDelegate!
     
@@ -30,18 +29,12 @@ class GuideScene: SKScene, UIGestureRecognizerDelegate {
     let scaleStartI: CGFloat = 2.0, scaleRangeI: CGFloat = 2.0, scaleSpeedI: CGFloat = -1.0
     let rotationStartI: CGFloat = 0.0, rotationRangeI: CGFloat = 0.0, rotationSpeedI: CGFloat = 0.0
     let colorBlendFactorI: CGFloat = 1.0, colorBlendRangeI: CGFloat = 0.0, colorBlendSpeedI: CGFloat = 0.0
-    let particleColorI = SKColor.redColor()
     var colorRampColorsI = [UIColor]()
     
-    var appearTimer: NSTimer!
     let appearDuration: CFTimeInterval = 2
-    
-    var pressRecognizer: UILongPressGestureRecognizer!
-    var pulseTimer: NSTimer!
     
     let elongateFactorI: CGFloat = 5.0
     var elongateFactor: CGFloat = 0.0
-    var elongateTimer: NSTimer!
     
     let buttonNames = ["flare", "randomPoop", "particleShower", "pulse", "disappear", "shrinkDisapper", "growDisappear", "snapBack", "appear", "snapBackEaseOutPosition"]
     
@@ -60,58 +53,12 @@ class GuideScene: SKScene, UIGestureRecognizerDelegate {
         
         setupGuide()
         
-        guideTouchNode = SKSpriteNode()
-        guideTouchNode.name = "guideTouchNode"
-        guideTouchNode.size = CGSize(width: 150, height: 150.0)
-        guideTouchNode.zPosition = 5
-        
-        guideNode.addChild(guideTouchNode)
-        
-        let guideLight = SKLightNode()
-        guideLight.categoryBitMask = 1
-        guideLight.falloff = 1
-        guideLight.ambientColor = UIColor.whiteColor()
-        guideLight.lightColor = UIColor(red: 1.0, green: 0.65, blue: 0.0, alpha: 0.5)
-        guideLight.shadowColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.05)
-        
-        guideNode.addChild(guideLight)
-        
         guideEmitterController = GuideEmitterController()
         guideEmitterController.guideEmitter = guideNode
         
         addChild(guideNode)
         
-        pressRecognizer = UILongPressGestureRecognizer(target: self, action: "press")
-        pressRecognizer.minimumPressDuration = 0.0
-        pressRecognizer.cancelsTouchesInView = false
-        view.addGestureRecognizer(pressRecognizer)
-        
         elongateFactor = elongateFactorI
-        
-        _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "appear", userInfo: nil, repeats: false)
-    }
-    
-    func press() {
-        
-        let pressLocation = pressRecognizer.locationInView(view)
-        let locationInScene = view!.convertPoint(pressLocation, toScene: scene!)
-        let testNode = nodeAtPoint(locationInScene)
-        
-        if testNode.name == "guideTouchNode"
-        {
-            if pressRecognizer.state.rawValue == 1
-            {
-                growDisappear()
-                prepareForShowSavedExercises()
-                
-                guideSceneDelegate.addSavedExerciseViewController()
-            }
-        }
-    }
-    
-    func prepareForShowSavedExercises() {
-        
-        pressRecognizer.enabled = false
     }
     
     func pulse() {
@@ -279,7 +226,7 @@ class GuideScene: SKScene, UIGestureRecognizerDelegate {
     func setupGuide() {
         
         //set guide options and modify particle position in range to prepare for appear call
-        guideNode.particleBirthRate = birthrateI; guideNode.particleLifetime = lifetimeI; guideNode.particleLifetimeRange = lifetimeRangeI; guideNode.particlePositionRange = CGVector(dx: 1000.0, dy: 1000.0); guideNode.emissionAngle = angleStartI; guideNode.emissionAngleRange = angleRangeI; guideNode.particleSpeed = speedI; guideNode.particleSpeedRange = speedRangeI; guideNode.xAcceleration = accelerationXI; guideNode.yAcceleration = accelerationYI; guideNode.particleAlpha = alphaStartI; guideNode.particleAlphaRange = alphaRangeI; guideNode.particleAlphaSpeed = alphaSpeedI; guideNode.particleScale = scaleStartI; guideNode.particleScaleRange = scaleRangeI; guideNode.particleScaleSpeed = scaleSpeedI; guideNode.particleRotation = rotationStartI; guideNode.particleRotationRange = rotationRangeI; guideNode.particleRotationSpeed = rotationSpeedI; guideNode.particleColorBlendFactor = colorBlendFactorI; guideNode.particleColorBlendFactorRange = colorBlendRangeI; guideNode.particleColorBlendFactorSpeed = colorBlendSpeedI; guideNode.particleColor = particleColorI
+        guideNode.particleBirthRate = birthrateI; guideNode.particleLifetime = lifetimeI; guideNode.particleLifetimeRange = lifetimeRangeI; guideNode.particlePositionRange = CGVector(dx: 1000.0, dy: 1000.0); guideNode.emissionAngle = angleStartI; guideNode.emissionAngleRange = angleRangeI; guideNode.particleSpeed = speedI; guideNode.particleSpeedRange = speedRangeI; guideNode.xAcceleration = accelerationXI; guideNode.yAcceleration = accelerationYI; guideNode.particleAlpha = alphaStartI; guideNode.particleAlphaRange = alphaRangeI; guideNode.particleAlphaSpeed = alphaSpeedI; guideNode.particleScale = scaleStartI; guideNode.particleScaleRange = scaleRangeI; guideNode.particleScaleSpeed = scaleSpeedI; guideNode.particleRotation = rotationStartI; guideNode.particleRotationRange = rotationRangeI; guideNode.particleRotationSpeed = rotationSpeedI; guideNode.particleColorBlendFactor = colorBlendFactorI; guideNode.particleColorBlendFactorRange = colorBlendRangeI; guideNode.particleColorBlendFactorSpeed = colorBlendSpeedI;
         
         getColorRampColors()
     }

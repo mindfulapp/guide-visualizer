@@ -19,15 +19,23 @@ class AnalysisViewController: UIViewController, AVAudioPlayerDelegate {
     
     var audioPlayer: AVAudioPlayer!
     
-    let audioFile = "beta-2"
+    let audioFile = "beta-0"
     let audioFileType = "wav"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.blackColor()
+        let bg = UIImage(named: "customMeditationBG.jpg")
         
-        let file = NSBundle.mainBundle().pathForResource(audioFile + "A", ofType: audioFileType)
+        let bgView = UIImageView(image: bg)
+        bgView.bounds = view.bounds
+        bgView.center = view.center
+        
+        view.insertSubview(bgView, belowSubview: amplitudePlot)
+        
+//        view.backgroundColor = UIColor.blackColor()
+        
+        let file = NSBundle.mainBundle().pathForResource(audioFile, ofType: audioFileType)
         let fileTable = AKSoundFileTable(filename: file)
         
         let looper = AKMonoSoundFileLooper(soundFile: fileTable)
@@ -49,7 +57,7 @@ class AnalysisViewController: UIViewController, AVAudioPlayerDelegate {
 
     func setupAudioPlayer() {
         do {
-            if let URL = NSBundle.mainBundle().URLForResource(audioFile, withExtension: "m4a")
+            if let URL = NSBundle.mainBundle().URLForResource(audioFile, withExtension: audioFileType)
             {
                 try audioPlayer = AVAudioPlayer(contentsOfURL: URL)
                 audioPlayer.delegate = self

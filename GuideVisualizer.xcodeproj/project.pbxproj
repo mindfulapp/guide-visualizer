@@ -25,6 +25,9 @@
 		1964D9581BA898DC0096EE5E /* beta-2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1964D9521BA898DC0096EE5E /* beta-2.m4a */; };
 		1964D9591BA898DC0096EE5E /* beta-2A.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1964D9531BA898DC0096EE5E /* beta-2A.wav */; };
 		1964D96C1BA89C480096EE5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1964D96B1BA89C480096EE5E /* Main.storyboard */; };
+		19BC4E3C1BA9D9A400F47F88 /* customMeditationBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19BC4E3B1BA9D9A400F47F88 /* customMeditationBG.jpg */; };
+		19BC4E421BA9DB1C00F47F88 /* beta-0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 19BC4E411BA9DB1C00F47F88 /* beta-0.wav */; };
+		19BC4E441BA9DC3400F47F88 /* alpha-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 19BC4E431BA9DC3400F47F88 /* alpha-2.wav */; };
 		19C92D821BA76F2700BB544D /* libAudioKit iOS Dynamic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C92D461BA76EA100BB544D /* libAudioKit iOS Dynamic.a */; };
 		19C92D8E1BA7708C00BB544D /* libsndfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C92D831BA76FD800BB544D /* libsndfile.framework */; };
 		19C92D8F1BA7708C00BB544D /* libsndfile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19C92D831BA76FD800BB544D /* libsndfile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -121,6 +124,9 @@
 		1964D9521BA898DC0096EE5E /* beta-2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "beta-2.m4a"; sourceTree = "<group>"; };
 		1964D9531BA898DC0096EE5E /* beta-2A.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beta-2A.wav"; sourceTree = "<group>"; };
 		1964D96B1BA89C480096EE5E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		19BC4E3B1BA9D9A400F47F88 /* customMeditationBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = customMeditationBG.jpg; sourceTree = "<group>"; };
+		19BC4E411BA9DB1C00F47F88 /* beta-0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beta-0.wav"; sourceTree = "<group>"; };
+		19BC4E431BA9DC3400F47F88 /* alpha-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "alpha-2.wav"; sourceTree = "<group>"; };
 		19C92D3D1BA76EA100BB544D /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AudioKit.xcodeproj; sourceTree = SOURCE_ROOT; };
 		19C92D831BA76FD800BB544D /* libsndfile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libsndfile.framework; path = AudioKit/Platforms/iOS/libsndfile.framework; sourceTree = "<group>"; };
 		19C92D841BA76FD800BB544D /* CsoundLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CsoundLib.framework; path = AudioKit/Platforms/iOS/CsoundLib.framework; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 				1946565F1BA33DE000F841F2 /* GuideScene.sks */,
 				19C92D971BA7789900BB544D /* GuideScene.swift */,
 				194656611BA33DE000F841F2 /* GuideVisualizerViewController.swift */,
+				19BC4E3B1BA9D9A400F47F88 /* customMeditationBG.jpg */,
 				1964D94A1BA898350096EE5E /* AnalysisViewController.swift */,
 				1964D96A1BA89BC80096EE5E /* Audio */,
 				1934510F1BA33ECE00311B01 /* Spark.png */,
@@ -225,6 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				1964D94E1BA898DC0096EE5E /* beta-0.m4a */,
+				19BC4E411BA9DB1C00F47F88 /* beta-0.wav */,
+				19BC4E431BA9DC3400F47F88 /* alpha-2.wav */,
 				1964D94F1BA898DC0096EE5E /* beta-0A.wav */,
 				1964D9501BA898DC0096EE5E /* beta-1.m4a */,
 				1964D9511BA898DC0096EE5E /* beta-1A.wav */,
@@ -418,7 +427,10 @@
 				1964D96C1BA89C480096EE5E /* Main.storyboard in Resources */,
 				194656361BA33D9D00F841F2 /* Assets.xcassets in Resources */,
 				1964D9581BA898DC0096EE5E /* beta-2.m4a in Resources */,
+				19BC4E3C1BA9D9A400F47F88 /* customMeditationBG.jpg in Resources */,
+				19BC4E421BA9DB1C00F47F88 /* beta-0.wav in Resources */,
 				1964D9541BA898DC0096EE5E /* beta-0.m4a in Resources */,
+				19BC4E441BA9DC3400F47F88 /* alpha-2.wav in Resources */,
 				1964D9561BA898DC0096EE5E /* beta-1.m4a in Resources */,
 				1964D9591BA898DC0096EE5E /* beta-2A.wav in Resources */,
 				194656641BA33DE000F841F2 /* GuideScene.sks in Resources */,
